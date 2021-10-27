@@ -128,3 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 *.dfu
+sim_build/
+typescript
