@@ -2,10 +2,10 @@
 
 module usr_rst #(
     parameter CLK_FREQUENCY = 48000000,
-    parameter BUTTON_LOGIC_LEVEL = 1,
+    parameter BUTTON_LOGIC_LEVEL = 0,
     parameter SYS_RESET_LOGIC_LEVEL = 1,
     parameter SYS_RESET_LOGIC_DEBOUNCE_MS = 10,
-    parameter BOOT_RESET_LOGIC_LEVEL = 1,
+    parameter BOOT_RESET_LOGIC_LEVEL = 0,
     parameter BOOT_LONG_PRESS_DURATION_MS = 1000
 )
 (
@@ -27,6 +27,7 @@ module usr_rst #(
     
     // Debug pins
     ,output wire dbg5
+    ,output wire dbg6
 );
     // ------------------------------------------------------------
     // System reset
@@ -45,10 +46,10 @@ module usr_rst #(
         .clk(clk48),
         .usr_btn(usr_btn),
         .sys_rst(sys_rst),
-        .boot_rst(rst_n),
-        .mon_cnt(dbg5)
+        .boot_rst(rst_n)
     );
-    
+    assign dbg5 = sys_rst;
+    assign dbg6 = rst_n;
     // ------------------------------------------------------------
     // Every positive edge increment register by 1
     logic [26:0] counter = 0;
@@ -95,10 +96,5 @@ module usr_rst #(
             end
         endcase
     end
-    
-    // ------------------------------------------------------------
-    // UART
-    assign dout = usr_btn;
-    assign din  = sys_rst;
     
 endmodule

@@ -58,9 +58,9 @@ parameters = {
     'CLK_FREQUENCY': 48000000,
     'BUTTON_LOGIC_LEVEL': 0,
     'SYS_RESET_LOGIC_LEVEL': 1,
-    'SYS_RESET_LOGIC_DEBOUNCE_MS': 1,
+    'SYS_RESET_LOGIC_DEBOUNCE_MS': 10,
     'BOOT_RESET_LOGIC_LEVEL': 0,
-    'BOOT_LONG_PRESS_DURATION_MS': 2,
+    'BOOT_LONG_PRESS_DURATION_MS': 1000,
 }
 
 # -----------------------------------------------------------------------------
