@@ -1,3 +1,12 @@
+/*
+BSD Zero Clause License
+Copyright (c) 2021 Danilo Ramos
+*/
+
+/*
+Simple test for the sys_boot_rst module for the OrangeCrab
+*/
+
 `default_nettype none
 
 module usr_rst #(

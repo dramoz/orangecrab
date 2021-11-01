@@ -89,5 +89,6 @@ sim: $(PROJ).vcd
 
 clean:
 	$(RM) -f $(PROJ).svf $(PROJ).bit $(PROJ)_out.config $(PROJ).json $(PROJ).dfu $(PROJ).vcd
+	$(RM) -f __pycache__ sim_build
 
 .PHONY: sim clean

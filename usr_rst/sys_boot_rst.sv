@@ -1,7 +1,15 @@
+/*
+BSD Zero Clause License
+Copyright (c) 2021 Danilo Ramos
+*/
+
+/*
+Module to give multiple functionality to a user input (button) by different press/hold actions
+- quick press: send system reset
+- press and hold: send boot_rst
+*/
+
 `default_nettype none
-
-// Send system reset or boot_rst on double click
-
 module sys_boot_rst #(
     parameter CLK_FREQUENCY = 48000000,
     parameter BUTTON_LOGIC_LEVEL = 1,
