@@ -1,14 +1,12 @@
 #####################################################################################
-#  File: uart_tx_rx_tb.py
-#  Copyright (c) 2021 Danilo Ramos
-#  All rights reserved.
-#  This license message must appear in all versions of this code including
-#  modified versions.
-#  BSD 3-Clause
+# BSD Zero Clause License
+# Copyright (c) 2021 Danilo Ramos
 ####################################################################################
-#  Overview:
 """
-Simple UART Testbench - CoCoTB module
+usr_rst CoCoTB testbench
+Note:
+- Change the parameter (*_MS) values to a lower value to review functionality
+- User real values to review proper parameter values generation
 """
 
 # -----------------------------------------------------------------------------
